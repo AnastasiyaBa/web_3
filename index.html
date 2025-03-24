@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Задание 3</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <h1>Задание №3</h1>
+    </header>
+
+    <div class="main">
+        <h2>Пожалуйста, введите свои данные для регистрации</h2>
+        
+        <form method="post" action="process.php">
+        
+            <label>ФИО</label><br>
+            <input type="text" name="full_name" required maxlength="150" 
+                   placeholder="Иванов Иван Иванович"><br>
+
+            
+            <label>Номер телефона</label><br>
+            <input type="tel" name="phone" required 
+                   placeholder="+7 (XXX) XXX-XX-XX"><br>
+
+    
+            <label>Адрес электронной почты</label><br>
+            <input type="email" name="email" required 
+                   placeholder="example@mail.com"><br>
+
+            
+            <label>Дата рождения</label><br>
+            <input type="date" name="birth_date" required><br>
+
+            
+            <label>Пол</label><br>
+            <input type="radio" name="gender" value="male" required> Мужской <br>
+            <input type="radio" name="gender" value="female"> Женский <br>
+
+            
+            <label>Любимый язык программирования</label><br>
+            <select name="languages[]" size="5" multiple required>
+                <option value="1">Pascal</option>
+                <option value="2">C</option>
+                <option value="3">C++</option>
+                <option value="4">JavaScript</option>
+                <option value="5">PHP</option>
+                <option value="6">Python</option>
+                <option value="7">Java</option>
+                <option value="8">Haskel</option>
+                <option value="9">Clojure</option>
+                <option value="10">Prolog</option>
+                <option value="11">Scala</option>
+            </select><br>
+
+           
+            <label>Биография</label><br>
+            <textarea name="bio" rows="5"></textarea><br>
+
+          
+            <input type="checkbox" name="contract" required> 
+            <label>С контрактом ознакомлен(а)*</label><br>
+
+            
+            <button type="submit">Сохранить</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Баринова А.В. 27/2</p>
+    </footer>
+</body>
+</html>
