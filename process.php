@@ -126,6 +126,8 @@ try {
         $bio,
         isset($_POST['contract']) ? 1 : 0
     ]);
+
+    $app_id = $pdo->lastInsertId();
     
     // 2. Сохраняем языки программирования
     $stmt = $pdo->prepare("INSERT INTO application_languages 
@@ -149,7 +151,7 @@ try {
             <h1>Данные сохранены!</h1>
         </header>
         <div class="main">
-            <p>Спасибо! Ваша заявка успешно сохранена.</p>
+            <p>Спасибо! Ваша заявка №'.$app_id.' успешно сохранена.</p>
             <p><a href="index.html">Вернуться к форме</a></p>
         </div>
     </body>
